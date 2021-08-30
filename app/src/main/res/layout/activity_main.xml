@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:padding="20dp"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteX="-38dp"
+    tools:layout_editor_absoluteY="-22dp">
+
+    <ImageView
+        android:id="@+id/main_activity_iv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/icon_description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@drawable/ic_flip_icon" />
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/main_activity_sw_simulate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/nunito_semibold"
+        android:minHeight="48dp"
+        android:text="@string/switch_text"
+        android:textColor="@color/subText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/main_activity_bt_flip"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/buttonMain"
+        android:text="@string/flip_btn_text"
+        android:textColor="@color/jade"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/main_activity_bt_reset"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_iv_logo"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <Button
+        android:id="@+id/main_activity_bt_reset"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:backgroundTint="@color/buttonMain"
+        android:text="@string/reset_btn_text"
+        android:textColor="@color/subText"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_activity_bt_flip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_activity_bt_flip"
+        app:layout_constraintTop_toTopOf="@+id/main_activity_bt_flip" />
+
+    <TextView
+        android:id="@+id/main_activity_tv_total_flips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/total_fllip_text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/main_activity_tv_total_heads"
+        app:layout_constraintEnd_toEndOf="@+id/main_activity_tv_total_heads"
+        app:layout_constraintStart_toStartOf="@+id/main_activity_tv_total_heads"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_bt_reset"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/main_activity_tv_total_heads"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/total_heads_text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/main_activity_tv_total_tails"
+        app:layout_constraintEnd_toEndOf="@+id/main_activity_tv_total_tails"
+        app:layout_constraintStart_toStartOf="@+id/main_activity_tv_total_tails"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_total_flips" />
+
+    <TextView
+        android:id="@+id/main_activity_tv_total_tails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito_semibold"
+        android:text="@string/total_tails_text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_total_heads" />
+
+    <ProgressBar
+        android:id="@+id/main_activity_pb_head_percentage"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="25"
+        android:progressTint="@color/jade"
+        app:layout_constraintBottom_toTopOf="@+id/main_activity_tv_tails_percentage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_head_percentage" />
+
+    <ProgressBar
+        android:id="@+id/main_activity_pb_tails_percentage"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="15dp"
+        android:max="100"
+        android:progress="75"
+        android:progressTint="@color/jade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_tails_percentage" />
+
+    <TextView
+        android:id="@+id/main_activity_tv_head_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:text="@string/placeholder_head_percent"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/main_activity_pb_head_percentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_total_tails"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/main_activity_tv_tails_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:text="@string/placeholder_tails_percent"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/main_activity_pb_tails_percentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_pb_head_percentage" />
+
+    <EditText
+        android:id="@+id/main_activity_et_simulate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="@color/jade"
+        android:ems="10"
+        android:hint="@string/simulate_hint"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:minHeight="48dp"
+        android:textColorHint="@color/subText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/main_activity_bt_simulate"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_pb_tails_percentage"
+        app:layout_constraintVertical_bias="0.45" />
+
+    <Button
+        android:id="@+id/main_activity_bt_simulate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:backgroundTint="@color/buttonMain"
+        android:text="@string/simulate_button"
+        android:textColor="@color/jade"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/main_activity_et_simulate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/main_activity_et_simulate"
+        app:layout_constraintTop_toTopOf="@+id/main_activity_et_simulate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
