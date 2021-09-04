@@ -108,17 +108,17 @@
         app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_total_heads" />
 
     <ProgressBar
-        android:id="@+id/main_activity_pb_head_percentage"
+        android:id="@+id/main_activity_pb_heads_percentage"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:max="100"
-        android:progress="25"
+        android:progress="0"
         android:progressTint="@color/jade"
         app:layout_constraintBottom_toTopOf="@+id/main_activity_tv_tails_percentage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_head_percentage" />
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_heads_percentage" />
 
     <ProgressBar
         android:id="@+id/main_activity_pb_tails_percentage"
@@ -126,7 +126,7 @@
         android:layout_width="0dp"
         android:layout_height="15dp"
         android:max="100"
-        android:progress="75"
+        android:progress="0"
         android:progressTint="@color/jade"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -134,13 +134,13 @@
         app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_tails_percentage" />
 
     <TextView
-        android:id="@+id/main_activity_tv_head_percentage"
+        android:id="@+id/main_activity_tv_heads_percentage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nunito"
         android:text="@string/placeholder_head_percent"
         android:textColor="@color/white"
-        app:layout_constraintBottom_toTopOf="@+id/main_activity_pb_head_percentage"
+        app:layout_constraintBottom_toTopOf="@+id/main_activity_pb_heads_percentage"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/main_activity_tv_total_tails"
         app:layout_constraintVertical_bias="0.100000024"
@@ -155,7 +155,7 @@
         android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/main_activity_pb_tails_percentage"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/main_activity_pb_head_percentage" />
+        app:layout_constraintTop_toBottomOf="@+id/main_activity_pb_heads_percentage" />
 
     <EditText
         android:id="@+id/main_activity_et_simulate"
