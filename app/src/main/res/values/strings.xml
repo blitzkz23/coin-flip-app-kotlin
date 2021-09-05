@@ -11,4 +11,7 @@
     <string name="placeholder_tails_percent">Tails: 0%</string>
     <string name="simulate_hint">Flips to simulate...</string>
     <string name="simulate_button">Simulate</string>
+    <string name="heads_count_text">Total Heads: </string>
+    <string name="tails_count_text">Total Tails: </string>
+    <string name="totals_count_text">Total Flips: </string>
 </resources>
